@@ -13,8 +13,8 @@
 body {
   background: linear-gradient(
     45deg,
-    rgb(17, 40, 101),
-    rgb(32, 79, 209)
+    var(--dark-blue),
+    var(--blue)
   );
   font-family: sans-serif;
   height: 100vh;
