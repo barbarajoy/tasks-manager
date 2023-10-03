@@ -69,7 +69,7 @@ export default function App() {
       <hr />
 
     {tasks.map( (item, index) => (
-      <section key={item}>
+      <section key={item} className='task'>
         <span>{item}</span>
         <button className='button-edit' onClick={ () => handleEdit(item) }>
           <FontAwesomeIcon icon={faEdit} style={{ color: '#000' }} /> 
