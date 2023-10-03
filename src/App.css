@@ -1,0 +1,93 @@
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(17, 40, 101);
+  font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  background-color: white;
+  border: 5px solid rgb(201, 96, 31);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+h1 {
+  color: black;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.button {
+  background-color: rgb(17, 40, 101);
+  color: white;
+  border: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 20px;
+  padding: 5px;
+  width: 100%;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: black;
+  }
+}
+
+input {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  border: 1px solid rgb(201, 96, 31);
+}
+
+.button-edit {
+  background-color: white;
+  border: 1px solid black;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  font-size: 18px;
+  margin-left: 10px;
+  margin-top: 10px;
+  padding: 5px;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(201, 96, 31);
+  }
+}
+
+.button-delete {
+  background-color: white;
+  border: 1px solid black;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  font-size: 18px;
+  margin-left: 5px;
+  margin-top: 10px;
+  padding: 5px;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(201, 96, 31);
+  }
+}
