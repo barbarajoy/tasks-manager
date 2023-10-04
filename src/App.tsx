@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useMemo } from 'react'
 import './App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
@@ -74,6 +74,10 @@ export default function App() {
     })
   }
 
+  const totalTasks = useMemo(() => {
+    return tasks.length
+  }, [tasks])
+
   return (
     <div className='container'>
       <h1>Tasks Manager</h1>
@@ -90,6 +94,8 @@ export default function App() {
       </button>
 
       <hr />
+
+      <strong>You have {totalTasks} tasks!</strong>
 
     {tasks.map( (item, index) => (
       <section key={item} className='task'>
