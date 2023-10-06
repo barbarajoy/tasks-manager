@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useMemo } from 'react'
+import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import './App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
@@ -32,7 +32,8 @@ export default function App() {
     localStorage.setItem("@reactclass", JSON.stringify(tasks))
   }, [tasks]);
 
-  function handleRegister() {
+
+  const handleRegister = useCallback(() => {
     if(!input){
       alert("Write the name of your task")
       return;
@@ -44,7 +45,7 @@ export default function App() {
 
     setTasks(todos => [...todos, input])
     setInput("")
-  }
+  }, [input, tasks])
 
   function handleSaveEdit(){
     const findIndexTask = tasks.findIndex(task => task === editTask.task);
